@@ -15,7 +15,6 @@ soup = BeautifulSoup(res.text, "html.parser")
 
 text = soup.get_text()
 
-if TARGET in text:
-    requests.post(SLACK_WEBHOOK, json={
-        "text": f"📩 捨てメアドにmen-estheからメールが来た: {TARGET}"
-    })
+requests.post(SLACK_WEBHOOK, json={
+    "text": "テスト通知"
+})
